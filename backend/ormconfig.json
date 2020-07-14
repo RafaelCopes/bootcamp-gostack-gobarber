@@ -4,5 +4,14 @@
     "port": 5432,
     "username": "postgres",
     "password": "pokemon11",
-    "database": "gobarber_postgres"
+    "database": "gobarber_postgres",
+    "entities": [
+        "./src/models/*.ts"
+    ],
+    "migrations": [
+        "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
 }
