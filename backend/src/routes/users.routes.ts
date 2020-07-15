@@ -8,9 +8,9 @@ usersRouter.post('/', async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
-        const CreateUser = new CreateUserService();
+        const createUser = new CreateUserService();
 
-        const user = await CreateUser.execute({ name, email, password });
+        const user = await createUser.execute({ name, email, password });
 
         delete user.password;
 
