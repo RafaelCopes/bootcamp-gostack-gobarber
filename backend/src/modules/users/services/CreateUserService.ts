@@ -3,8 +3,8 @@ import { injectable, inject } from 'tsyringe';
 import AppError from '@shared/errors/AppError';
 
 import User from '@modules/users/infra/typeorm/entities/User';
-import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 
+import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import IHashProvider from '@modules/users/providers/HashProvider/models/IHashProvider';
 
 interface IRequest {
@@ -16,7 +16,7 @@ interface IRequest {
 @injectable()
 class CreateUserService {
     constructor(
-        @inject('UsersRespository')
+        @inject('UsersRepository')
         private usersRepository: IUsersRepository,
 
         @inject('HashProvider')
