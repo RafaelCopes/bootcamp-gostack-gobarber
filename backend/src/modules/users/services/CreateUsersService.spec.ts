@@ -33,7 +33,7 @@ describe('CreateUser', () => {
         expect(user.password).toBeTruthy();
     });
 
-    it('should not be able to createa new user with an email that already exists', async () => {
+    it('should not be able to create a new user with an email that already exists', async () => {
         await createUser.execute({
             name: 'John Doe',
             email: 'johndoe@gmail.com',
