@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { classToClass } from 'class-transformer';
 
 import { container } from 'tsyringe';
 
@@ -13,9 +14,7 @@ class UsersAvatarController {
             avatarFilename: req.file.filename,
         });
 
-        delete user.password;
-
-        return res.json(user);
+        return res.json(classToClass(user));
     }
 }
 
